@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anmol Prashar - Data Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,9 +13,9 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: #000000;
-            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
             overflow-x: hidden;
             line-height: 1.6;
         }
@@ -27,7 +28,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(ellipse at bottom, #1a1a1a 0%, #000000 100%);
+            background: radial-gradient(ellipse at bottom, #1c2526 0%, #0a0a0a 100%);
         }
 
         .stars {
@@ -35,11 +36,11 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(2px 2px at 20px 30px, #ccc, transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(200, 200, 200, 0.8), transparent),
-                radial-gradient(1px 1px at 90px 40px, #ddd, transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(200, 200, 200, 0.6), transparent),
-                radial-gradient(2px 2px at 160px 30px, #bbb, transparent);
+                radial-gradient(2px 2px at 20px 30px, #b0b0b0, transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(176, 176, 176, 0.8), transparent),
+                radial-gradient(1px 1px at 90px 40px, #c0c0c0, transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(176, 176, 176, 0.6), transparent),
+                radial-gradient(2px 2px at 160px 30px, #a0a0a0, transparent);
             background-repeat: repeat;
             background-size: 200px 100px;
             animation: zoom 20s infinite linear;
@@ -47,7 +48,7 @@
 
         @keyframes zoom {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
@@ -57,8 +58,8 @@
             top: 0;
             width: 100%;
             padding: 20px 50px;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -72,9 +73,9 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            background: linear-gradient(45deg, #00b7eb, #ff00ff);
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #3b82f6, #a855f7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -87,18 +88,18 @@
         }
 
         .nav-links a {
-            color: #ffffff;
+            color: #e0e0e0;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 25px;
             transition: all 0.3s ease;
-            border: 1px solid transparent;
+            font-weight: 400;
         }
 
         .nav-links a:hover, .nav-links a.active {
-            background: linear-gradient(45deg, rgba(0, 183, 235, 0.2), rgba(255, 0, 255, 0.2));
-            border: 1px solid rgba(0, 183, 235, 0.5);
-            box-shadow: 0 0 20px rgba(0, 183, 235, 0.3);
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
         }
 
         /* Page Container */
@@ -124,58 +125,62 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, #00b7eb, #ff00ff, #00ffcc);
+            background: linear-gradient(90deg, #3b82f6, #a855f7, #22d3ee);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: glow 2s ease-in-out infinite alternate;
+            animation: glow 3s ease-in-out infinite alternate;
+            font-weight: 700;
         }
 
         @keyframes glow {
-            from { text-shadow: 0 0 20px rgba(0, 183, 235, 0.5); }
-            to { text-shadow: 0 0 30px rgba(255, 0, 255, 0.8); }
+            from { text-shadow: 0 0 15px rgba(59, 130, 246, 0.5); }
+            to { text-shadow: 0 0 25px rgba(168, 85, 247, 0.7); }
         }
 
         .hero h2 {
             font-size: 2rem;
-            color: #00b7eb;
+            color: #3b82f6;
             margin-bottom: 30px;
+            font-weight: 600;
         }
 
         #typing-text {
             font-size: 2rem;
-            color: #00b7eb;
-            border-right: 2px solid #00b7eb;
+            color: #3b82f6;
+            border-right: 2px solid #3b82f6;
             white-space: nowrap;
             overflow: hidden;
             display: inline-block;
             vertical-align: middle;
+            font-weight: 400;
         }
 
         .hero p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 40px;
-            color: #b3b3b3;
+            color: #a0a0a0;
         }
 
         .cta-button {
             display: inline-block;
             padding: 15px 40px;
-            background: linear-gradient(45deg, #00b7eb, #ff00ff);
-            color: white;
+            background: linear-gradient(90deg, #3b82f6, #a855f7);
+            color: #ffffff;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
+            font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 0 30px rgba(0, 183, 235, 0.3);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 40px rgba(0, 183, 235, 0.5);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+            background: linear-gradient(90deg, #2563eb, #9333ea);
         }
 
         /* Galaxy Learning Hub Section */
@@ -183,21 +188,22 @@
             text-align: center;
             margin: 60px 0;
             padding: 40px;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
-            border: 1px solid rgba(0, 183, 235, 0.3);
-            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(12px);
         }
 
         .galaxy-hub h3 {
             font-size: 2rem;
-            color: #00b7eb;
+            color: #3b82f6;
             margin-bottom: 20px;
+            font-weight: 600;
         }
 
         .galaxy-hub p {
             font-size: 1.1rem;
-            color: #b3b3b3;
+            color: #a0a0a0;
             margin-bottom: 30px;
         }
 
@@ -210,24 +216,25 @@
         }
 
         .skill-category {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             padding: 30px;
             border-radius: 20px;
-            border: 1px solid rgba(0, 183, 235, 0.3);
-            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(12px);
             transition: all 0.3s ease;
         }
 
         .skill-category:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 183, 235, 0.2);
-            border-color: rgba(0, 183, 235, 0.6);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
         }
 
         .skill-category h3 {
-            color: #00b7eb;
+            color: #3b82f6;
             margin-bottom: 20px;
             font-size: 1.5rem;
+            font-weight: 600;
         }
 
         .skill-tags {
@@ -237,12 +244,13 @@
         }
 
         .skill-tag {
-            background: linear-gradient(45deg, rgba(0, 183, 235, 0.2), rgba(255, 0, 255, 0.2));
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.9rem;
-            border: 1px solid rgba(0, 183, 235, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.3);
             transition: all 0.3s ease;
+            font-weight: 400;
         }
 
         .skill-tag:hover {
@@ -250,9 +258,9 @@
         }
 
         @keyframes pulseGlow {
-            0% { box-shadow: 0 0 5px rgba(0, 183, 235, 0.5); }
-            50% { box-shadow: 0 0 15px rgba(0, 183, 235, 0.8); }
-            100% { box-shadow: 0 0 5px rgba(0, 183, 235, 0.5); }
+            0% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+            50% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.8); }
+            100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
         }
 
         /* Projects Section */
@@ -264,28 +272,29 @@
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             padding: 30px;
             border-radius: 20px;
-            border: 1px solid rgba(255, 0, 255, 0.3);
-            backdrop-filter: blur(10px);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            backdrop-filter: blur(12px);
             transition: all 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 0, 255, 0.2);
-            border-color: rgba(255, 0, 255, 0.6);
+            box-shadow: 0 15px 30px rgba(168, 85, 247, 0.2);
+            border-color: rgba(168, 85, 247, 0.5);
         }
 
         .project-card h3 {
-            color: #ff00ff;
+            color: #a855f7;
             margin-bottom: 15px;
             font-size: 1.4rem;
+            font-weight: 600;
         }
 
         .project-card p {
-            color: #b3b3b3;
+            color: #a0a0a0;
             margin-bottom: 20px;
         }
 
@@ -296,12 +305,13 @@
         }
 
         .tech-tag {
-            background: linear-gradient(45deg, rgba(255, 255, 0, 0.2), rgba(255, 0, 255, 0.2));
+            background: linear-gradient(90deg, rgba(168, 85, 247, 0.2), rgba(59, 130, 246, 0.2));
             padding: 5px 12px;
             border-radius: 15px;
             font-size: 0.8rem;
-            border: 1px solid rgba(255, 255, 0, 0.3);
+            border: 1px solid rgba(168, 85, 247, 0.3);
             transition: all 0.3s ease;
+            font-weight: 400;
         }
 
         .tech-tag:hover {
@@ -320,34 +330,36 @@
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #b3b3b3;
+            color: #a0a0a0;
         }
 
         .about-text h3 {
-            color: #00b7eb;
+            color: #3b82f6;
             margin-bottom: 20px;
             font-size: 1.8rem;
+            font-weight: 600;
         }
 
         .achievements {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             padding: 30px;
             border-radius: 20px;
-            border: 1px solid rgba(0, 183, 235, 0.3);
-            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(12px);
         }
 
         .achievements h3 {
-            color: #ff00ff;
+            color: #a855f7;
             margin-bottom: 20px;
+            font-weight: 600;
         }
 
         .achievement-item {
             margin-bottom: 15px;
             padding: 15px;
-            background: rgba(0, 183, 235, 0.1);
+            background: rgba(59, 130, 246, 0.1);
             border-radius: 10px;
-            border-left: 3px solid #00b7eb;
+            border-left: 3px solid #3b82f6;
         }
 
         /* Contact Section */
@@ -364,23 +376,23 @@
         }
 
         .contact-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             padding: 30px;
             border-radius: 20px;
-            border: 1px solid rgba(0, 183, 235, 0.3);
-            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(12px);
             transition: all 0.3s ease;
         }
 
         .contact-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 183, 235, 0.2);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.2);
         }
 
         .contact-icon {
             font-size: 2rem;
             margin-bottom: 15px;
-            color: #00b7eb;
+            color: #3b82f6;
         }
 
         /* Section Headers */
@@ -399,16 +411,16 @@
 
         .section-header h1 {
             font-size: 3rem;
-            background: linear-gradient(45deg, #00b7eb, #ff00ff);
+            background: linear-gradient(90deg, #3b82f6, #a855f7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .section-header p {
             font-size: 1.2rem;
-            color: #b3b3b3;
+            color: #a0a0a0;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -416,7 +428,7 @@
         /* Particle Animation */
         .particle {
             position: absolute;
-            background: rgba(0, 183, 235, 0.8);
+            background: rgba(59, 130, 246, 0.7);
             border-radius: 50%;
             pointer-events: none;
             animation: float 6s ease-in-out infinite;
@@ -430,7 +442,7 @@
         /* Neural Network Particle Animation */
         .neural-particle {
             position: absolute;
-            background: rgba(0, 183, 235, 0.8);
+            background: rgba(59, 130, 246, 0.7);
             border-radius: 50%;
             pointer-events: none;
             width: 6px;
@@ -439,21 +451,21 @@
         }
 
         @keyframes neuralFlow {
-            0%, 100% { transform: translate(0, 0); opacity: 0.8; }
+            0%, 100% { transform: translate(0, 0); opacity: 0.7; }
             50% { transform: translate(20px, -20px); opacity: 0.3; }
         }
 
         /* Neural Connection Lines */
         .neural-line {
             position: absolute;
-            border-top: 1px solid rgba(0, 183, 235, 0.5);
+            border-top: 1px solid rgba(59, 130, 246, 0.4);
             pointer-events: none;
             animation: fadeLine 2s ease-in-out infinite;
         }
 
         @keyframes fadeLine {
             0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.7; }
+            50% { opacity: 0.6; }
         }
 
         /* Cursor Trail */
@@ -461,14 +473,14 @@
             position: absolute;
             width: 8px;
             height: 8px;
-            background: rgba(0, 183, 235, 0.5);
+            background: rgba(59, 130, 246, 0.4);
             border-radius: 50%;
             pointer-events: none;
             animation: trailFade 1s ease-out forwards;
         }
 
         @keyframes trailFade {
-            0% { opacity: 0.5; transform: scale(1); }
+            0% { opacity: 0.4; transform: scale(1); }
             100% { opacity: 0; transform: scale(0.2); }
         }
 
@@ -492,7 +504,7 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
 
             .hero h2, #typing-text {
@@ -538,7 +550,7 @@
                 
                 <div class="galaxy-hub">
                     <h3>🌌 Galaxy Learning Hub</h3>
-                    <p>Join Galaxy Learning Hub to explore free resources, Tech tutorial on Data Science, DSA , Web Dev , BlockChain , System Design , Machine Learning. Empowering learners worldwide .</p>
+                    <p>Join Galaxy Learning Hub to explore free resources, Tech tutorials on Data Science, DSA, Web Dev, Blockchain, System Design, Machine Learning. Empowering learners worldwide.</p>
                     <a href="https://anmol1630.github.io/galaxy-learning-hub/" target="_blank" class="cta-button">🚀 Visit Galaxy Learning Hub</a>
                 </div>
 
@@ -553,9 +565,9 @@
                         <p>anmolprasharr@gmail.com</p>
                     </div>
                     <div class="contact-card">
-                        <div class="contact-icon">💼</div>
-                        <h3>LinkedIn</h3>
-                        <p><a href="https://linkedin.com" style="color: #00b7eb; text-decoration: none;">Connect with me</a></p>
+                        <div class="contact-icon">🐦</div>
+                        <h3>X (Twitter)</h3>
+                        <p><a href="https://x.com/axnmolsharma" style="color: #3b82f6; text-decoration: none;">Follow me</a></p>
                     </div>
                 </div>
             </div>
@@ -718,7 +730,7 @@
                 <p>Let's connect and explore opportunities together</p>
             </div>
             <div class="contact-content">
-                <p style="font-size: 1.2rem; margin-bottom: 40px; color: #b3b3b3;">
+                <p style="font-size: 1.2rem; margin-bottom: 40px; color: #a0a0a0;">
                     I am always open to discussing new opportunities, collaborations, or just having a conversation about data science and technology. Feel free to reach out!
                 </p>
                 <div class="contact-info">
@@ -727,11 +739,10 @@
                         <h3>Email</h3>
                         <p>anmolprasharr@gmail.com</p>
                     </div>
-                    
                     <div class="contact-card">
-                        <div class="contact-icon">💼</div>
-                        <h3>LinkedIn</h3>
-                        <p><a href="https://linkedin.com" style="color: #00b7eb; text-decoration: none;">Connect with me</a></p>
+                        <div class="contact-icon">🐦</div>
+                        <h3>X (Twitter)</h3>
+                        <p><a href="https://x.com/axnmolsharma" style="color: #3b82f6; text-decoration: none;">Follow me</a></p>
                     </div>
                 </div>
             </div>
@@ -740,19 +751,15 @@
 
     <script>
         function showPage(pageId) {
-            // Hide all pages
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.remove('active'));
             
-            // Show selected page
             document.getElementById(pageId).classList.add('active');
             
-            // Update navigation
             const navLinks = document.querySelectorAll('.nav-links a');
             navLinks.forEach(link => link.classList.remove('active'));
             event.target.classList.add('active');
 
-            // Trigger section header animations
             const headers = document.querySelectorAll('.section-header');
             headers.forEach(header => {
                 header.classList.remove('visible');
@@ -788,7 +795,6 @@
             setTimeout(type, isDeleting ? 50 : 100);
         }
 
-        // Start typing animation
         type();
 
         // Create floating particles
@@ -800,7 +806,7 @@
             particle.style.width = Math.random() * 4 + 2 + 'px';
             particle.style.height = particle.style.width;
             particle.style.animationDuration = Math.random() * 3 + 2 + 's';
-            particle.style.opacity = Math.random() * 0.5 + 0.3;
+            particle.style.opacity = Math.random() * 0.4 + 0.2;
             
             document.body.appendChild(particle);
             
@@ -817,7 +823,6 @@
             particle.style.top = Math.random() * window.innerHeight + 'px';
             document.body.appendChild(particle);
             
-            // Create connections to nearby particles
             const particles = document.querySelectorAll('.neural-particle');
             particles.forEach(other => {
                 if (other !== particle && Math.random() < 0.1) {
@@ -843,11 +848,9 @@
             setTimeout(() => particle.remove(), 4000);
         }
 
-        // Create particles periodically
         setInterval(createParticle, 300);
         setInterval(createNeuralParticle, 500);
 
-        // Add smooth scrolling and entrance animations
         window.addEventListener('load', () => {
             const elements = document.querySelectorAll('.skill-category, .project-card, .contact-card, .galaxy-hub');
             elements.forEach((el, index) => {
@@ -861,7 +864,6 @@
                 }, index * 100);
             });
 
-            // Trigger section header animation on load
             const headers = document.querySelectorAll('.section-header');
             headers.forEach(header => {
                 if (header.closest('.page.active')) {
@@ -870,15 +872,13 @@
             });
         });
 
-        // Add mouse move effect for subtle interactivity
         document.addEventListener('mousemove', (e) => {
             const stars = document.querySelector('.stars');
             const x = e.clientX / window.innerWidth;
             const y = e.clientY / window.innerHeight;
             
-            stars.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+            stars.style.transform = `translate(${x * 8}px, ${y * 8}px)`;
 
-            // Create cursor trail
             const trail = document.createElement('div');
             trail.className = 'cursor-trail';
             trail.style.left = e.clientX + 'px';
@@ -888,4 +888,4 @@
         });
     </script>
 </body>
-</html> 
+</html>
