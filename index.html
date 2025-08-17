@@ -57,7 +57,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 50px;
+            padding: 20px 5%;
             background: rgba(10, 10, 10, 0.7);
             backdrop-filter: blur(12px);
             z-index: 1000;
@@ -68,12 +68,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .logo {
-            font-size: 26px;
+            font-size: clamp(1.5rem, 5vw, 1.8rem);
             font-weight: 700;
             background: linear-gradient(90deg, #3b82f6, #a855f7);
             -webkit-background-clip: text;
@@ -84,16 +84,17 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: clamp(15px, 3vw, 30px);
         }
 
         .nav-links a {
             color: #e0e0e0;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 8px 15px;
             border-radius: 25px;
             transition: all 0.3s ease;
             font-weight: 400;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
         .nav-links a:hover, .nav-links a.active {
@@ -102,11 +103,19 @@
             box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
         }
 
+        /* Mobile Navigation */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: #e0e0e0;
+            cursor: pointer;
+        }
+
         /* Page Container */
         .page {
             display: none;
             min-height: 100vh;
-            padding: 100px 50px 50px;
+            padding: clamp(80px, 15vh, 100px) 5% 50px;
         }
 
         .page.active {
@@ -114,18 +123,18 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         /* Home Page */
         .hero {
             text-align: center;
-            padding: 100px 0;
+            padding: clamp(60px, 15vh, 100px) 0;
         }
 
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
             margin-bottom: 20px;
             background: linear-gradient(90deg, #3b82f6, #a855f7, #22d3ee);
             -webkit-background-clip: text;
@@ -141,14 +150,14 @@
         }
 
         .hero h2 {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 5vw, 2rem);
             color: #3b82f6;
             margin-bottom: 30px;
             font-weight: 600;
         }
 
         #typing-text {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 5vw, 2rem);
             color: #3b82f6;
             border-right: 2px solid #3b82f6;
             white-space: nowrap;
@@ -159,15 +168,15 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            max-width: 900px;
             margin: 0 auto 40px;
             color: #a0a0a0;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 15px 40px;
+            padding: clamp(12px, 3vw, 15px) clamp(30px, 5vw, 40px);
             background: linear-gradient(90deg, #3b82f6, #a855f7);
             color: #ffffff;
             text-decoration: none;
@@ -175,6 +184,7 @@
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
         .cta-button:hover {
@@ -187,7 +197,7 @@
         .galaxy-hub {
             text-align: center;
             margin: 60px 0;
-            padding: 40px;
+            padding: clamp(30px, 5vw, 40px);
             background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
             border: 1px solid rgba(59, 130, 246, 0.3);
@@ -195,14 +205,14 @@
         }
 
         .galaxy-hub h3 {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
             color: #3b82f6;
             margin-bottom: 20px;
             font-weight: 600;
         }
 
         .galaxy-hub p {
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             color: #a0a0a0;
             margin-bottom: 30px;
         }
@@ -210,14 +220,14 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
 
         .skill-category {
             background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
+            padding: clamp(20px, 4vw, 30px);
             border-radius: 20px;
             border: 1px solid rgba(59, 130, 246, 0.3);
             backdrop-filter: blur(12px);
@@ -233,7 +243,7 @@
         .skill-category h3 {
             color: #3b82f6;
             margin-bottom: 20px;
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
             font-weight: 600;
         }
 
@@ -247,7 +257,7 @@
             background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
             padding: 8px 15px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
             border: 1px solid rgba(59, 130, 246, 0.3);
             transition: all 0.3s ease;
             font-weight: 400;
@@ -266,14 +276,14 @@
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
 
         .project-card {
             background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
+            padding: clamp(20px, 4vw, 30px);
             border-radius: 20px;
             border: 1px solid rgba(168, 85, 247, 0.3);
             backdrop-filter: blur(12px);
@@ -289,13 +299,14 @@
         .project-card h3 {
             color: #a855f7;
             margin-bottom: 15px;
-            font-size: 1.4rem;
+            font-size: clamp(1.2rem, 3vw, 1.4rem);
             font-weight: 600;
         }
 
         .project-card p {
             color: #a0a0a0;
             margin-bottom: 20px;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
         .project-tech {
@@ -308,7 +319,7 @@
             background: linear-gradient(90deg, rgba(168, 85, 247, 0.2), rgba(59, 130, 246, 0.2));
             padding: 5px 12px;
             border-radius: 15px;
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 2vw, 0.8rem);
             border: 1px solid rgba(168, 85, 247, 0.3);
             transition: all 0.3s ease;
             font-weight: 400;
@@ -321,14 +332,14 @@
         /* About Section */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: start;
             margin-top: 50px;
         }
 
         .about-text {
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             line-height: 1.8;
             color: #a0a0a0;
         }
@@ -336,13 +347,13 @@
         .about-text h3 {
             color: #3b82f6;
             margin-bottom: 20px;
-            font-size: 1.8rem;
+            font-size: clamp(1.5rem, 4vw, 1.8rem);
             font-weight: 600;
         }
 
         .achievements {
             background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
+            padding: clamp(20px, 4vw, 30px);
             border-radius: 20px;
             border: 1px solid rgba(59, 130, 246, 0.3);
             backdrop-filter: blur(12px);
@@ -352,6 +363,7 @@
             color: #a855f7;
             margin-bottom: 20px;
             font-weight: 600;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
         }
 
         .achievement-item {
@@ -360,6 +372,7 @@
             background: rgba(59, 130, 246, 0.1);
             border-radius: 10px;
             border-left: 3px solid #3b82f6;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
         }
 
         /* Contact Section */
@@ -370,14 +383,14 @@
 
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
 
         .contact-card {
             background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
+            padding: clamp(20px, 4vw, 30px);
             border-radius: 20px;
             border: 1px solid rgba(59, 130, 246, 0.3);
             backdrop-filter: blur(12px);
@@ -390,7 +403,7 @@
         }
 
         .contact-icon {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
             margin-bottom: 15px;
             color: #3b82f6;
         }
@@ -410,7 +423,7 @@
         }
 
         .section-header h1 {
-            font-size: 3rem;
+            font-size: clamp(2rem, 6vw, 3rem);
             background: linear-gradient(90deg, #3b82f6, #a855f7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -419,9 +432,9 @@
         }
 
         .section-header p {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             color: #a0a0a0;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
@@ -485,40 +498,124 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            nav {
-                padding: 15px 20px;
-            }
-
+        @media (max-width: 1024px) {
             .nav-links {
-                gap: 15px;
+                gap: 20px;
             }
 
             .nav-links a {
-                padding: 8px 15px;
+                padding: 8px 12px;
                 font-size: 0.9rem;
             }
 
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero h2, #typing-text {
+                font-size: 1.8rem;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.9);
+                backdrop-filter: blur(12px);
+                padding: 20px 0;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 12px 20px;
+                font-size: 1rem;
+                text-align: center;
+            }
+
             .page {
-                padding: 80px 20px 30px;
+                padding: 80px 5% 30px;
             }
 
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             .hero h2, #typing-text {
                 font-size: 1.5rem;
             }
 
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .galaxy-hub {
+                padding: 20px;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 20px;
             }
 
             .skills-grid,
-            .projects-grid {
+            .projects-grid,
+            .contact-info {
                 grid-template-columns: 1fr;
+            }
+
+            .skill-category,
+            .project-card,
+            .contact-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2, #typing-text {
+                font-size: 1.2rem;
+            }
+
+            .cta-button {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+
+            .section-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-header p {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -531,6 +628,7 @@
     <nav>
         <div class="nav-container">
             <div class="logo">ANMOL PRASHAR</div>
+            <div class="menu-toggle">☰</div>
             <ul class="nav-links">
                 <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
                 <li><a href="#" onclick="showPage('about')">About</a></li>
@@ -554,7 +652,7 @@
                     <a href="https://anmol1630.github.io/galaxy-learning-hub/" target="_blank" class="cta-button">🚀 Visit Galaxy Learning Hub</a>
                 </div>
 
-                <div style="margin: 40px 0;">
+                <div style="margin: 40px 0; text-align: center;">
                     <a href="#" onclick="showPage('projects')" class="cta-button">Explore My AI Projects</a>
                 </div>
 
@@ -730,7 +828,7 @@
                 <p>Let's connect and explore opportunities together</p>
             </div>
             <div class="contact-content">
-                <p style="font-size: 1.2rem; margin-bottom: 40px; color: #a0a0a0;">
+                <p style="font-size: clamp(0.9rem, 2.5vw, 1.2rem); margin-bottom: 40px; color: #a0a0a0;">
                     I am always open to discussing new opportunities, collaborations, or just having a conversation about data science and technology. Feel free to reach out!
                 </p>
                 <div class="contact-info">
@@ -767,6 +865,11 @@
                     setTimeout(() => header.classList.add('visible'), 100);
                 }
             });
+
+            // Close mobile menu after clicking a link
+            const navLinksContainer = document.querySelector('.nav-links');
+            navLinksContainer.classList.remove('active');
+            document.querySelector('.menu-toggle').textContent = '☰';
         }
 
         // Typing Animation
@@ -885,6 +988,14 @@
             trail.style.top = e.clientY + 'px';
             document.body.appendChild(trail);
             setTimeout(() => trail.remove(), 1000);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+            const menuToggle = document.querySelector('.menu-toggle');
+            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
         });
     </script>
 </body>
